@@ -49,9 +49,16 @@ def action_bar() -> rx.Component:
 def index() -> rx.Component:
     return rx.container(
         rx.vstack(
+            rx.image(src="UDD-negro.png",
+                     width="10em",
+                     height="auto"
+                     ),
             rx.span("Prototipo"),
-            rx.heading("El Bot de Alumnos UDD", color="black"),
-            rx.heading("Chatea con tus documentos", color="black", size="sm"),
+            rx.heading("El Bot de Alumnos UDD",
+                       color="black"),
+            rx.heading("Chatea con documentos oficiales",
+                       color="black",
+                       size="sm"),
             rx.upload(
                 rx.vstack(
                     rx.button(
@@ -76,11 +83,13 @@ def index() -> rx.Component:
             ),
             rx.button(
                 "Cargar",
+                is_loading=State.processing,
                 on_click=lambda: State.handle_upload(
                     rx.upload_files(),
 
                 ),
             ),
+
             rx.span("Archivos subidos:"),
             rx.span(" "),
             rx.responsive_grid(

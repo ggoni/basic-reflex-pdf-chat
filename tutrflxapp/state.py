@@ -16,6 +16,8 @@ class State(rx.State):
     question: str
     chat_history: list[tuple[str, str]]
     files: list[str]
+    processing = False
+    complete = False
 
     async def handle_upload(self, files: list[rx.UploadFile]):
         global vector_store
@@ -24,6 +26,7 @@ class State(rx.State):
         Args:
             files: The uploaded files.
         """
+
         for file in files:
             upload_data = await file.read()
             outfile = f".web/public/{file.filename}"
@@ -31,7 +34,7 @@ class State(rx.State):
             # Save the file.
             with open(outfile, "wb") as file_object:
                 file_object.write(upload_data)
-
+            self.processing, self.complete = True, False
             # Update the files var.
             self.files.append(file.filename)
             pdf_docs = [f".web/public/{file}" for file in self.files]
@@ -39,6 +42,7 @@ class State(rx.State):
             vector_store = pdf_vectorizer.get_vector_store()
             with open('vector_store.pkl', 'wb') as file:
                 pickle.dump(vector_store, file)
+            self.processing, self.complete = False, True
 
     def answer(self):
 
