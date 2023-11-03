@@ -50,8 +50,8 @@ def index() -> rx.Component:
     return rx.container(
         rx.vstack(
             rx.span("Prototipo"),
-            rx.heading("El Bot de Alumnos UDD", color="blue"),
-            rx.heading("Chatea con tus documentos", color="blue", size="sm"),
+            rx.heading("El Bot de Alumnos UDD", color="black"),
+            rx.heading("Chatea con tus documentos", color="black", size="sm"),
             rx.upload(
                 rx.vstack(
                     rx.button(
