@@ -31,12 +31,12 @@ def action_bar() -> rx.Component:
     return rx.hstack(
         rx.input(
             value=State.question,
-            placeholder="Ask a question",
+            placeholder="Haga una pregunta...",
             on_change=State.set_question,
             style=style.input_style,
         ),
         rx.button(
-            "Ask",
+            "Pregunte",
             on_click=State.answer,
             style=style.button_style,
         ),
@@ -45,8 +45,13 @@ def action_bar() -> rx.Component:
 
 def index() -> rx.Component:
     return rx.container(
+        rx.span("Prototipo"),
+        rx.heading("El Bot de Alumnos UDD", color="blue"),
         chat(),
         action_bar(),
+        padding_x="2em",
+        padding_y="3em",
+        z_index=999
     )
 
 
