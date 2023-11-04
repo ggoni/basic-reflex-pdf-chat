@@ -1,20 +1,12 @@
-from multiprocessing import Pool
 from functools import partial
 import glob
 import os
 import openai
 from dotenv import load_dotenv
-from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings
-from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import ConversationalRetrievalChain
 from langchain.document_loaders import PyPDFLoader
-from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
-from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from typing import List
 from langchain.llms import HuggingFaceHub
@@ -22,7 +14,6 @@ from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
-from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 
 load_dotenv()
