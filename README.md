@@ -27,3 +27,7 @@
 - [ ] Administración de usuario y clave
 - [ ] Diseñar reglas en lugar de respuestas ante preguntas con información crítica o sensible
 - [ ] Persistir tuplas (pregunta, respuesta)
+
+
+https://github.com/ggoni-contractor/basic-reflex-pdf-chat/assets/7189084/14d24a2b-15f7-4b7f-9ec0-6a4c4ba2b3fe
+
