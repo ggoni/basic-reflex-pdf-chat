@@ -10,6 +10,7 @@
 
 ## Definiciones
 
+- Respuestas se ciñen a contenido de los archivos cargados en la aplicación
 - No se ha definido explícitamente mecanismo para trabjar con el contexto
 - En esta versión se trabajó con FAISS: dado un conjunto de vectores, podemos indexarlos mediante FAISS y, a partir de otro vector (el vector de consulta), buscar los vectores más similares dentro del índice. Detalles [acá](https://www.pinecone.io/learn/series/faiss/faiss-tutorial/)
 
@@ -19,7 +20,7 @@
 - Documentos en PDF son de dominio público, disponibilizados por la Universidad del Desarrollo (UDD)
 
 
-## Pendientes
+## Roadmap (potencial)
 
 - [ ] Agregar feedback de procesamiento al usario (Spinning Circle u otro: Revisar componentes)
 - [ ] Manejo de sesiones
