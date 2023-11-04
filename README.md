@@ -16,7 +16,7 @@
 ## Fuentes
 
 - Basado en documentación y ejemplos de Reflex
-- Documentos en PDF son de dominio público, disponibilizados por la Universidad del desarrollo
+- Documentos en PDF son de dominio público, disponibilizados por la Universidad del Desarrollo (UDD)
 
 
 ## Pendientes
