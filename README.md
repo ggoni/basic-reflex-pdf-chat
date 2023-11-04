@@ -3,7 +3,7 @@
 ## Instrucciones
 
 - Instalar ambiente virtual con venv
-- Instalar Reflex y otros requerimientos usando ```pip install requirements.txt```
+- Instalar Reflex y otros requerimientos usando ```pip install -r requirements.txt```
 - ```reflex init```
 - ```reflex run```
 - La aplicación estará corriendo , según indica el mensaje ```App running at: http://localhost:3000```
