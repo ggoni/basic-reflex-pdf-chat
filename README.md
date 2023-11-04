@@ -15,7 +15,7 @@
 
 ## Fuentes
 
-- Basado en documentación y ejemplos de Reflex
+- Basado en documentación y ejemplos de [Reflex](https://reflex.dev/docs/getting-started/introduction/)
 - Documentos en PDF son de dominio público, disponibilizados por la Universidad del Desarrollo (UDD)
 
 
@@ -24,7 +24,7 @@
 - [ ] Agregar feedback de procesamiento al usario (Spinning Circle u otro: Revisar componentes)# Protipo de Chatbot
 - [ ] Manejo de sesiones
 - [ ] Administración de usuario y clave
-- [ ] Respuestas ante preguntas con información crítica
+- [ ] Diseñar reglas en lugar de respuestas ante preguntas con información crítica o sensible
 - [ ] Persistir tuplas (pregunta, respuesta)   
 
 
