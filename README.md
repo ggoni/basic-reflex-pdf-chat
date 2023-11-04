@@ -21,7 +21,7 @@
 
 ## Pendientes
 
-- [ ] Agregar feedback de procesamiento al usario (Spinning Circle u otro: Revisar componentes)# Protipo de Chatbot
+- [ ] Agregar feedback de procesamiento al usario (Spinning Circle u otro: Revisar componentes)
 - [ ] Manejo de sesiones
 - [ ] Administración de usuario y clave
 - [ ] Diseñar reglas en lugar de respuestas ante preguntas con información crítica o sensible
