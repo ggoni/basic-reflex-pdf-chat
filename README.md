@@ -1,4 +1,4 @@
-# Protipo de Chatbot
+# Protipo de Chatbot institucional
 
 ## Instrucciones
 
