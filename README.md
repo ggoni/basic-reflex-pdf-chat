@@ -1,6 +1,14 @@
 # Protipo de Chatbot
 
-## Definciones
+## Instrucciones
+
+- Instalar ambiente virtual con venv
+- Instalar Reflex y otros requerimientos usando ```pip install requirements.txt```
+- ```reflex init```
+- ```reflex run```
+- La aplicación estará corriendo , según indica el mensaje ```App running at: http://localhost:3000```
+
+## Definiciones
 
 - No se ha definido explícitamente mecanismo para trabjar con el contexto
 - Se trabaja con una base de datos vectorial FAISS
@@ -18,8 +26,6 @@
 - [ ] Administración de usuario y clave
 - [ ] Respuestas ante preguntas con información crítica
 - [ ] Persistir tuplas (pregunta, respuesta)   
-
-
 
 
 
