@@ -29,5 +29,5 @@
 - [ ] Persistir tuplas (pregunta, respuesta)
 
 
-https://github.com/ggoni-contractor/basic-reflex-pdf-chat/assets/7189084/14d24a2b-15f7-4b7f-9ec0-6a4c4ba2b3fe
 
+<img width="667" alt="Screenshot 2023-11-04 at 12 37 32" src="https://github.com/ggoni-contractor/basic-reflex-pdf-chat/assets/7189084/2e1fb99d-020e-4a0b-ab81-fd1af42537c1">
