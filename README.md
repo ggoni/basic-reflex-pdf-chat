@@ -11,7 +11,7 @@
 ## Definiciones
 
 - No se ha definido explícitamente mecanismo para trabjar con el contexto
-- Se trabaja con una base de datos vectorial FAISS
+- En esta versión se trabajó con FAISS: dado un conjunto de vectores, podemos indexarlos mediante FAISS y, a partir de otro vector (el vector de consulta), buscar los vectores más similares dentro del índice. Detalles [acá](https://www.pinecone.io/learn/series/faiss/faiss-tutorial/)
 
 ## Fuentes
 
