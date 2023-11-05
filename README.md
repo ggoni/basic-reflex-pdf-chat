@@ -30,4 +30,4 @@
 
 
 
-<img width="667" alt="Screenshot 2023-11-04 at 12 37 32" src="https://github.com/ggoni-contractor/basic-reflex-pdf-chat/assets/7189084/2e1fb99d-020e-4a0b-ab81-fd1af42537c1">
+<img width="667" alt="Screenshot 2023-11-04 at 12 37 32" src="https://github.com/ggoni-contractor/basic-reflex-pdf-chat/assets/chat.png">
