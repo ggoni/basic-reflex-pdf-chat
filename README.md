@@ -29,6 +29,7 @@
 - [ ] Persistir tuplas (pregunta, respuesta)
 
 
-![chat](https://github.com/ggoni/basic-reflex-pdf-chat/assets/7189084/2b269bf0-a539-4e6a-aa5e-8feec94a1a21)
+![chat](https://github.com/ggoni/basic-reflex-pdf-chat/assets/7189084/dda854fa-3e36-43c0-b3ee-17b4d216328d)
+
 
 
