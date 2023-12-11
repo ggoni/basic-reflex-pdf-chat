@@ -10,8 +10,8 @@
 
 ## Definiciones
 
-- Respuestas se ciñen a contenido de los archivos cargados en la aplicación
-- No se ha definido explícitamente mecanismo para trabjar con el contexto
+- Respuestas se ciñen a contenido de los archivos cargados en la aplicación (temperatura = 0)
+- No se ha definido explícitamente mecanismo para trabajar con el contexto
 - En esta versión se trabajó con FAISS: dado un conjunto de vectores, podemos indexarlos mediante FAISS y, a partir de otro vector (el vector de consulta), buscar los vectores más similares dentro del índice. Detalles [acá](https://www.pinecone.io/learn/series/faiss/faiss-tutorial/)
 
 ## Fuentes
