@@ -22,7 +22,7 @@
 
 ## Roadmap (potencial)
 
-- [ ] Agregar feedback de procesamiento al usario (Spinning Circle u otro: Revisar componentes)
+- [ ] Agregar feedback de procesamiento al usario (_Spinning Circle_ u otro: Revisar componentes)
 - [ ] Manejo de sesiones
 - [ ] Administración de usuario y clave
 - [ ] Diseñar reglas en lugar de respuestas ante preguntas con información crítica o sensible
