@@ -18,6 +18,9 @@ class State(rx.State):
     files: list[str]
     processing = False
     complete = False
+    # elemp: Se agregan dos estados de Feedback para el procesamiento
+    color = "blue"
+    action = "Elija archivos y aprete botón de carga"
 
     async def handle_upload(self, files: list[rx.UploadFile]):
         global vector_store
@@ -28,13 +31,14 @@ class State(rx.State):
         """
 
         for file in files:
+            
             upload_data = await file.read()
             outfile = f".web/public/{file.filename}"
 
             # Save the file.
             with open(outfile, "wb") as file_object:
                 file_object.write(upload_data)
-            self.processing, self.complete = True, False
+            # self.processing, self.complete = True, False
             # Update the files var.
             self.files.append(file.filename)
             pdf_docs = [f".web/public/{file}" for file in self.files]
@@ -42,7 +46,13 @@ class State(rx.State):
             vector_store = pdf_vectorizer.get_vector_store()
             with open('vector_store.pkl', 'wb') as file:
                 pickle.dump(vector_store, file)
-            self.processing, self.complete = False, True
+            # self.processing, self.complete = False, True
+        # elemp: Al terminar la carga de archivos, se modifica el feedback a finalizado
+        self.ChangeStatus(False, True, "green", "Carga finalizada",),
+    
+    # elemp: Se crea método para cambiar los estados que permiten entregar feedback
+    def ChangeStatus(self, processing: bool, complete: bool, color: str, action: str):
+        self.processing, self.complete, self.color, self.action = processing, complete, color, action
 
     def answer(self):
 

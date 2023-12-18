@@ -21,6 +21,7 @@ def qa(question: str, answer: str) -> rx.Component:
     )
 
 
+
 def chat() -> rx.Component:
     return rx.box(
         rx.foreach(
@@ -44,7 +45,9 @@ def action_bar() -> rx.Component:
             style=style.button_style,
         ),
     )
-
+# elemp: Función que retorna el Handler de la Carga de archivos
+def WorkProgress() -> rx.State.event_handlers:
+    return State.handle_upload(rx.upload_files(),)
 
 def index() -> rx.Component:
     return rx.container(
@@ -66,11 +69,15 @@ def index() -> rx.Component:
                         color=MY_COLOR,
                         bg="white",
                         border=f"1px solid {MY_COLOR}",
+                        # elemp: Aqui cambiamos estado de BOX de feedback entre selección y carga
+                        on_click=lambda: State.ChangeStatus(False, False, "blue", "Elija archivos y aprete botón de carga",),
                     ),
                     rx.text(
-                        "O arrastre y suelte sus archivos aquí",
+                        "Archivos seleccionados:",
                     ),
                 ),
+                # elemp: Aqui feedback con lista de los archivos seleccionados para cargar
+                rx.vstack(rx.foreach(rx.selected_files, lambda file: rx.text(f'• {file}', font_size="0.7em", text_align="left", as_="em"))),
                 multiple=True,
                 accept={
                     "application/pdf": [".pdf"]
@@ -84,12 +91,25 @@ def index() -> rx.Component:
             rx.button(
                 "Cargar",
                 is_loading=State.processing,
-                on_click=lambda: State.handle_upload(
-                    rx.upload_files(),
-
-                ),
+                loading_text="Cargando...",
+                # elemp: Aqui el *TRUCO*. 
+                # Ambos eventos, el Feedback de procesando y la carga de archivos deben gatillarse en handlers separados y de forma simultánea
+                # 1. Handler de Carga de archivos
+                on_click=WorkProgress(),
+                # 2. Handler de Feedback de progreso
+                on_mouse_up=lambda: State.ChangeStatus(True, False, "red", "Por favor espere mientras carga...",),
             ),
-
+            # elemp: Se agrega BOX de Feedback entre selección y carga de archivos
+            rx.box(
+                State.action,
+                bg=State.color,
+                border_radius="xl",
+                width="70%",
+                color="white",
+                padding="3%",
+                text_align="center",
+                
+            ),
             rx.span("Archivos subidos:"),
             rx.span(" "),
             rx.responsive_grid(
@@ -110,7 +130,6 @@ def index() -> rx.Component:
         padding_y="1em",
         z_index=999
     )
-
 
 app = rx.App()
 app.add_page(index)
